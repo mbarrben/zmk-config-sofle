@@ -54,13 +54,13 @@
         raise_layer {
 // ----------------------------------------------------------------------------------------------------------
 // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       | EP_OFF|
-// |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |  DEL  |
+// | SLEEP | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |  DEL  |
 // | BTTOG | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | EP_ON |
 // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
 //                |      |       |       |      |      |  |      |      |      |       |      |
             bindings = <
 &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans    &trans    &trans   &trans    &trans  &ext_power EP_OFF
-&trans       &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                   &kp PG_UP &trans    &kp UP   &trans    &kp N0  &kp DEL
+&kp K_SLEEP  &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                   &kp PG_UP &trans    &kp UP   &trans    &kp N0  &kp DEL
 &out OUT_TOG &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                 &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &ext_power EP_ON
 &trans       &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &trans   &trans  &trans    &trans    &trans   &trans    &trans  &trans
                           &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans   &trans
